@@ -2,10 +2,11 @@
 import Header from '@/components/Header.vue';
 import MainBlock from '@/components/MainBlock.vue';
 import AboutBlock from '@/components/AboutBlock.vue';
+import PortfolioBlock from '@/components/PortfolioBlock.vue';
 
 export default {
   name: 'HomeView',
-  components: { Header, MainBlock, AboutBlock },
+  components: { Header, MainBlock, AboutBlock, PortfolioBlock },
 }
 </script>
 
@@ -28,8 +29,9 @@ export default {
     </section>
 
     <!-- portfolio -->
-    <section id="portfolio" class="h-screen flex items-center justify-center bg-blue-600 text-white snap-start">
-      <h3 class="text-2xl">portfolio</h3>
+    <section id="portfolio" class="relative bg-gray-950 h-screen
+     text-white snap-start overflow-x-hidden p-2 pb-17 lg:pl-17 lg:pb-2">
+      <PortfolioBlock/>
     </section>
   </main>
 </template>

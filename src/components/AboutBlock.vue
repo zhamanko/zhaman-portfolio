@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <div class="flex flex-col">
+    <div class="flex flex-col pt-8">
         <div class="relative rounded-xl border border-white/20 bg-white/2 
         backdrop-blur-md p-6 md:p-12 shadow-lg w-3/4 left-5">
             <div class="flex flex-col gap-4">
@@ -58,7 +58,7 @@
             <div class="flex justify-end">
                 <div
                     class="relative -top-4 rounded-xl border border-white/20 bg-white/2 backdrop-blur-md  shadow-lg min-w-74 w-3/6">
-                    <img src="/about.png" alt="" class="rounded-xl">
+                    <img src="/about.webp" alt="" class="rounded-xl">
                 </div>
             </div>
 
