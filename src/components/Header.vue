@@ -41,8 +41,8 @@ export default {
 
 <template>
 
-    <header class="fixed z-20 right-2 lg:right-full lg:top-2 left-2 bottom-2 flex flex-col justify-center items-center text-white border
-  border-white/20 bg-white/2 backdrop-blur-md px-6 py-2 rounded-lg">
+    <header class="fixed z-20 bottom-2 left-2 right-2 lg:top-2 lg:left-auto flex flex-col justify-center items-center text-white border
+  border-white/20 bg-white/2 backdrop-blur-md px-2 py-2 rounded-lg">
         <div class="flex-1"></div>
         <div>
             <nav class="flex flex-row lg:flex-col items-center gap-5">

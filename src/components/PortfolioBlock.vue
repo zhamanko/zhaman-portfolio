@@ -8,16 +8,17 @@
         </div>
     </div>
 
-    <div class="flex flex-col gap-10 w-full pt-14">
+    <div class="flex flex-col gap-10 w-full pt-14 lg:pt-8">
         <div class="relative rounded-xl border border-white/20 bg-white/2 
-        backdrop-blur-md p-2 pb-5 md:p-12 shadow-lg w-full">
-            <img src="/project-one.png" alt="" class="relative -top-8 left-1 rounded">
-            <div class="relative">
+        backdrop-blur-md p-2 pb-5 shadow-lg w-full
+        lg:flex lg:flex-row">
+            <img src="/project-one.png" alt="" class="relative -top-8 left-1 rounded lg:w-1/2">
+            <div class="relative w-full flex flex-col justify-around lg:p-5">
                 <div class="flex justify-between px-5 opacity-70">
                     <p>01</p>
                     <p>2025</p>
                 </div>
-                <h1 class="text-2xl ml-8 my-6">Project-one</h1>
+                <h1 class="text-2xl lg:text-4xl ml-8 my-6">Project-one</h1>
                 <div class="flex gap-2 opacity-70 justify-end">
                     <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Vue.js</p>
                     <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Tailwind</p>
@@ -27,14 +28,15 @@
         </div>
 
         <div class="relative rounded-xl border border-white/20 bg-white/2 
-        backdrop-blur-md p-2 pb-5 md:p-12 shadow-lg w-full">
-            <img src="/project-one.png" alt="" class="relative -top-8 left-1 rounded">
-            <div class="relative">
+        backdrop-blur-md p-2 pb-5 shadow-lg w-full
+        lg:flex lg:flex-row">
+            <img src="/project-one.png" alt="" class="relative -top-8 left-1 rounded lg:w-1/2">
+            <div class="relative w-full flex flex-col justify-around lg:p-5">
                 <div class="flex justify-between px-5 opacity-70">
                     <p>01</p>
                     <p>2025</p>
                 </div>
-                <h1 class="text-2xl ml-8 my-6">Project-two</h1>
+                <h1 class="text-2xl lg:text-4xl ml-8 my-6">Project-one</h1>
                 <div class="flex gap-2 opacity-70 justify-end">
                     <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Vue.js</p>
                     <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Tailwind</p>
@@ -44,14 +46,15 @@
         </div>
 
         <div class="relative rounded-xl border border-white/20 bg-white/2 
-        backdrop-blur-md p-2 pb-5 md:p-12 shadow-lg w-full">
-            <img src="/project-one.png" alt="" class="relative -top-8 left-1 rounded">
-            <div class="relative">
+        backdrop-blur-md p-2 pb-5 shadow-lg w-full
+        lg:flex lg:flex-row">
+            <img src="/project-one.png" alt="" class="relative -top-8 left-1 rounded lg:w-1/2">
+            <div class="relative w-full flex flex-col justify-around lg:p-5">
                 <div class="flex justify-between px-5 opacity-70">
                     <p>01</p>
                     <p>2025</p>
                 </div>
-                <h1 class="text-2xl ml-8 my-6">Project-three</h1>
+                <h1 class="text-2xl lg:text-4xl ml-8 my-6">Project-one</h1>
                 <div class="flex gap-2 opacity-70 justify-end">
                     <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Vue.js</p>
                     <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Tailwind</p>

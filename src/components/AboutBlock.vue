@@ -8,9 +8,9 @@
         </div>
     </div>
 
-    <div class="flex flex-col pt-8">
+    <div class="flex flex-col pt-8 lg:pl-40 overflow-hidden">
         <div class="relative rounded-xl border border-white/20 bg-white/2 
-        backdrop-blur-md p-6 md:p-12 shadow-lg w-3/4 left-5">
+        backdrop-blur-md p-6 shadow-lg w-3/4 left-5">
             <div class="flex flex-col gap-4">
                 <h1 class="text-center text-xl">About me</h1>
                 <hr class="opacity-20">
@@ -20,14 +20,15 @@
             </div>
         </div>
 
-        <div class="flex flex-col-reverse justify-end">
-            <div class="flex justify-end">
+        <div class="flex flex-col-reverse justify-end lg:w-4/5">
+            <div class="flex justify-end lg:absolute lg:-bottom-41 right-60">
                 <div
-                    class="relative -top-12 z-5 rounded-xl border border-white/20 bg-white/2 backdrop-blur-md p-6 md:p-12 shadow-lg w-3/4">
+                    class="relative -top-12 lg:-top-28 z-5 rounded-xl border border-white/20 bg-white/2 backdrop-blur-md p-6 shadow-lg w-3/4
+                    lg:w-120">
                     <div class="flex flex-col gap-4">
                         <h1 class="text-center text-xl">Education</h1>
                         <hr class="opacity-20">
-                        <nav>
+                        <nav class="ml-6">
                             <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
                             <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
                         </nav>
@@ -36,11 +37,12 @@
             </div>
 
             <div
-                class="relative -top-8 rounded-xl border border-white/20 bg-white/2 backdrop-blur-md p-6 md:p-12 shadow-lg w-3/4">
+                class="relative -top-8 lg:-top-40 rounded-xl border border-white/20 bg-white/2 backdrop-blur-md p-6 shadow-lg 
+                w-3/4">
                 <div class="flex flex-col gap-4">
                     <h1 class="text-center text-xl">Soft skill</h1>
                     <hr class="opacity-20">
-                    <nav>
+                    <nav class="ml-6">
                         <li>HTMl</li>
                         <li>CSS</li>
                         <li>JavaScritp</li>
@@ -57,7 +59,8 @@
 
             <div class="flex justify-end">
                 <div
-                    class="relative -top-4 rounded-xl border border-white/20 bg-white/2 backdrop-blur-md  shadow-lg min-w-74 w-3/6">
+                    class="relative -top-4 rounded-xl border border-white/20 bg-white/2 backdrop-blur-md shadow-lg min-w-74 w-1/2
+                    lg:w-1/3">
                     <img src="/about.webp" alt="" class="rounded-xl">
                 </div>
             </div>
