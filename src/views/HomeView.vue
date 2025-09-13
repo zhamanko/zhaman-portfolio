@@ -3,10 +3,11 @@ import Header from '@/components/Header.vue';
 import MainBlock from '@/components/MainBlock.vue';
 import AboutBlock from '@/components/AboutBlock.vue';
 import PortfolioBlock from '@/components/PortfolioBlock.vue';
+import AboutforWebBlock from '@/components/AboutforWebBlock.vue';
 
 export default {
   name: 'HomeView',
-  components: { Header, MainBlock, AboutBlock, PortfolioBlock },
+  components: { Header, MainBlock, AboutBlock, PortfolioBlock, AboutforWebBlock },
 }
 </script>
 
@@ -27,11 +28,18 @@ export default {
      text-white snap-start overflow-x-hidden p-2 pb-17 lg:pr-17 lg:pb-2">
       <AboutBlock />
     </section>
+    
 
     <!-- portfolio -->
     <section id="portfolio" class="relative bg-gray-950 h-screen
      text-white snap-start overflow-x-hidden p-2 pb-17 lg:pr-17 lg:pb-2">
       <PortfolioBlock />
+    </section>
+
+     <!-- about for web-site block -->
+    <section id="about" class="relative bg-gray-950 h-screen
+     text-white snap-start overflow-x-hidden p-2 pb-17 lg:pr-17 lg:pb-2">
+      <AboutforWebBlock />
     </section>
 
   </main>

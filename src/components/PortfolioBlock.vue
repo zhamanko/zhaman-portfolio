@@ -62,6 +62,14 @@
                 </div>
             </div>
         </div>
+
+        <div class="mb-4">
+            <nav class="flex flex-row justify-center items-center gap-4">
+                <ul class="py-2 px-4 border border-white/20 bg-white/2 backdrop-blur-xl rounded-full">1</ul>
+                <ul class="py-2 px-4 border border-white/20 bg-white/2 backdrop-blur-xl rounded-full">2</ul>
+                <ul class="py-2 px-4 border border-white/20 bg-white/2 backdrop-blur-xl rounded-full">3</ul>
+            </nav>
+        </div>
     </div>
 
 </template>
