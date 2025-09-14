@@ -8,10 +8,10 @@
         </div>
     </div>
 
-    <div class="flex flex-col gap-5 lg:gap-10 w-full min-h-full justify-center items-center">
+    <div class="flex flex-col gap-5 pt-8 lg:gap-10 w-full min-h-full justify-center items-center">
 
-        <div class="opacity-30">
-            <img src="/logo_text.png" alt="" class=" lg:w-1/3 grayscale">
+        <div class="opacity-30 flex justify-center">
+            <img src="/logo_text.png" alt="" class=" lg:w-3/5 grayscale">
         </div>
 
         <div class="relative rounded-xl border border-white/20 bg-white/2 

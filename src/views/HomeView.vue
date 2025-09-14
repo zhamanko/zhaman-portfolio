@@ -17,8 +17,8 @@ export default {
 
   <main ref="main" class="h-screen min-w-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
     <!-- main block -->
-    <section id="home" class="relative bg-gray-950 h-screen flex items-center 
-    justify-center text-white snap-start overflow-x-hidden">
+    <section id="home" class="relative bg-gray-950 h-screen flex items-center justify-center
+     text-white snap-start overflow-x-hidden p-2 pb-17 lg:pr-17 lg:pb-2">
       <MainBlock />
     </section>
 
@@ -37,7 +37,7 @@ export default {
     </section>
 
      <!-- about for web-site block -->
-    <section id="about" class="relative bg-gray-950 h-screen
+    <section id="aboutforweb" class="relative bg-gray-950 h-screen
      text-white snap-start overflow-x-hidden p-2 pb-17 lg:pr-17 lg:pb-2">
       <AboutforWebBlock />
     </section>

@@ -1,75 +1,130 @@
+<script>
+export default {
+  name: "PortfolioBlock",
+  data() {
+    return {
+      currentIndex: 0,
+      itemsPerPage: 2,
+      startX: 0,
+      startY: 0,
+      endX: 0,
+      endY: 0,
+      projects: [
+        { id: 1, name: "Project-one", year: 2025, img: "./project-one.png", tehnologia: ["Vue.js", "Tailwind", "Swiper.js"] },
+        { id: 2, name: "Project-two", year: 2024, img: "./project-one.png", tehnologia: ["Vue.js", "Pinia", "Tailwind"] },
+        { id: 3, name: "Project-three", year: 2024, img: "./project-one.png", tehnologia: ["Vue.js", "Pinia", "Tailwind"] },
+        { id: 4, name: "Project-four", year: 2023, img: "./project-one.png", tehnologia: ["Vue.js", "Tailwind"] },
+        { id: 5, name: "Project-five", year: 2022, img: "./project-one.png", tehnologia: ["Vue.js", "Tailwind", "Pinia"] },
+      ],
+    };
+  },
+  computed: {
+    totalSlides() {
+      return Math.ceil(this.projects.length / this.itemsPerPage);
+    },
+    groupedProjects() {
+      let groups = [];
+      for (let i = 0; i < this.projects.length; i += this.itemsPerPage) {
+        groups.push(this.projects.slice(i, i + this.itemsPerPage));
+      }
+      return groups;
+    },
+  },
+  methods: {
+    next() {
+      if (this.currentIndex < this.totalSlides - 1) this.currentIndex++;
+    },
+    prev() {
+      if (this.currentIndex > 0) this.currentIndex--;
+    },
+    handleTouchStart(e) {
+      this.startX = e.touches[0].clientX;
+      this.startY = e.touches[0].clientY;
+    },
+    handleTouchEnd(e) {
+      this.endX = e.changedTouches[0].clientX;
+      this.endY = e.changedTouches[0].clientY;
+
+      const diffX = this.startX - this.endX;
+      const diffY = this.startY - this.endY;
+
+      // 👉 свайп тільки якщо по X більше ніж по Y (щоб не конфліктувало зі скролом)
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+        if (diffX > 0) this.next(); // свайп вліво
+        else this.prev(); // свайп вправо
+      }
+    },
+  },
+};
+</script>
+
 <template>
-    <div class="absolute inset-0 pointer-events-none">
+
+    <h1 class="text-center text-4xl mt-10 mb-7">My projects</h1>
+
+  <div
+    class="relative w-full overflow-hidden"
+    @touchstart="handleTouchStart"
+    @touchend="handleTouchEnd"
+  >
+    <!-- Слайдер -->
+    <div
+      class="flex transition-transform duration-500"
+      :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
+    >
+      <div
+        v-for="(group, gIndex) in groupedProjects"
+        :key="gIndex"
+        class="flex-shrink-0 w-full flex flex-col gap-6 px-4"
+      >
         <div
-            class="absolute opacity-20 top-30 left-30 w-60 h-60 md:-top-20 md:-left-20 md:w-120 md:h-120 rounded-full bg-green-600 blur-3xl">
+          v-for="project in group"
+          :key="project.id"
+          class="rounded-xl border border-white/20 bg-white/5 backdrop-blur-md p-4 shadow-lg"
+        >
+          <img :src="project.img" alt="" class="rounded w-full  object-cover" />
+          <div class="flex justify-between opacity-70 mt-3 px-2">
+            <p>{{ project.id.toString().padStart(2, "0") }}</p>
+            <p>{{ project.year }}</p>
+          </div>
+          <h1 class="text-xl lg:text-2xl mt-4 ml-4">{{ project.name }}</h1>
+          <div class="flex flex-wrap gap-2 opacity-70 justify-end mt-4">
+            <p
+              v-for="tech in project.tehnologia"
+              :key="tech"
+              class="bg-white/10 border border-white/30 py-1 px-3 rounded-full text-sm"
+            >
+              {{ tech }}
+            </p>
+          </div>
         </div>
-        <div
-            class="absolute opacity-40 bottom-30 right-10 w-56 h-56 md:bottom-20 md:-right-20 md:w-90 md:h-90 rounded-full bg-purple-600 blur-3xl">
-        </div>
+      </div>
     </div>
 
-    <div class="flex flex-col gap-10 w-full pt-14 lg:pt-8">
-        <div class="relative rounded-xl border border-white/20 bg-white/2 
-        backdrop-blur-md p-2 pb-5 shadow-lg w-full
-        lg:flex lg:flex-row">
-            <img src="/project-one.png" alt="" class="relative -top-8 left-1 rounded lg:w-1/2">
-            <div class="relative w-full flex flex-col justify-around lg:p-5">
-                <div class="flex justify-between px-5 opacity-70">
-                    <p>01</p>
-                    <p>2025</p>
-                </div>
-                <h1 class="text-2xl lg:text-4xl ml-8 my-6">Project-one</h1>
-                <div class="flex gap-2 opacity-70 justify-end">
-                    <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Vue.js</p>
-                    <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Tailwind</p>
-                    <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Swiper.js</p>
-                </div>
-            </div>
-        </div>
+    <!-- Кнопки -->
+    <button
+      @click="prev"
+      :disabled="currentIndex === 0"
+      class="absolute top-1/2 left-2 -translate-y-1/2 bg-white/10 border border-white/30 rounded-full px-3 py-2 disabled:opacity-30"
+    >
+      ←
+    </button>
+    <button
+      @click="next"
+      :disabled="currentIndex === totalSlides - 1"
+      class="absolute top-1/2 right-2 -translate-y-1/2 bg-white/10 border border-white/30 rounded-full px-3 py-2 disabled:opacity-30"
+    >
+      →
+    </button>
 
-        <div class="relative rounded-xl border border-white/20 bg-white/2 
-        backdrop-blur-md p-2 pb-5 shadow-lg w-full
-        lg:flex lg:flex-row">
-            <img src="/project-one.png" alt="" class="relative -top-8 left-1 rounded lg:w-1/2">
-            <div class="relative w-full flex flex-col justify-around lg:p-5">
-                <div class="flex justify-between px-5 opacity-70">
-                    <p>01</p>
-                    <p>2025</p>
-                </div>
-                <h1 class="text-2xl lg:text-4xl ml-8 my-6">Project-one</h1>
-                <div class="flex gap-2 opacity-70 justify-end">
-                    <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Vue.js</p>
-                    <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Tailwind</p>
-                    <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Swiper.js</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="relative rounded-xl border border-white/20 bg-white/2 
-        backdrop-blur-md p-2 pb-5 shadow-lg w-full
-        lg:flex lg:flex-row">
-            <img src="/project-one.png" alt="" class="relative -top-8 left-1 rounded lg:w-1/2">
-            <div class="relative w-full flex flex-col justify-around lg:p-5">
-                <div class="flex justify-between px-5 opacity-70">
-                    <p>01</p>
-                    <p>2025</p>
-                </div>
-                <h1 class="text-2xl lg:text-4xl ml-8 my-6">Project-one</h1>
-                <div class="flex gap-2 opacity-70 justify-end">
-                    <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Vue.js</p>
-                    <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Tailwind</p>
-                    <p class="bg-white/2 backdrop-blur-xl border border-white/40 py-2 px-5 rounded-full">Swiper.js</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="mb-4">
-            <nav class="flex flex-row justify-center items-center gap-4">
-                <ul class="py-2 px-4 border border-white/20 bg-white/2 backdrop-blur-xl rounded-full">1</ul>
-                <ul class="py-2 px-4 border border-white/20 bg-white/2 backdrop-blur-xl rounded-full">2</ul>
-                <ul class="py-2 px-4 border border-white/20 bg-white/2 backdrop-blur-xl rounded-full">3</ul>
-            </nav>
-        </div>
+    <!-- Пагінація -->
+    <div class="flex justify-center mt-4 gap-2">
+      <span
+        v-for="(p, i) in totalSlides"
+        :key="i"
+        class="w-3 h-3 rounded-full"
+        :class="i === currentIndex ? 'bg-purple-600' : 'bg-white/30'"
+      ></span>
     </div>
-
+  </div>
 </template>
