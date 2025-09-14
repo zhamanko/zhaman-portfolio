@@ -8,68 +8,8 @@
         </div>
     </div>
 
-    <!-- <div class="flex flex-col pt-8 lg:pl-40 overflow-hidden">
-        <div class="relative rounded-xl border border-white/20 bg-white/2 
-        backdrop-blur-md p-6 shadow-lg w-3/4 left-5">
-            <div class="flex flex-col gap-4">
-                <h1 class="text-center text-xl">About me</h1>
-                <hr class="opacity-20">
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Placeat alias, qui sit est molestias delectus provident assumenda fugiat minima, adipisci quaerat?
-                    Error enim modi iure. Animi ut facere cum? Voluptate?</p>
-            </div>
-        </div>
-
-        <div class="flex flex-col-reverse justify-end lg:w-4/5">
-            <div class="flex justify-end lg:absolute lg:-bottom-41 right-60">
-                <div
-                    class="relative -top-12 lg:-top-28 z-5 rounded-xl border border-white/20 bg-white/2 backdrop-blur-md p-6 shadow-lg w-3/4
-                    lg:w-120">
-                    <div class="flex flex-col gap-4">
-                        <h1 class="text-center text-xl">Education</h1>
-                        <hr class="opacity-20">
-                        <nav class="ml-6">
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="relative -top-8 lg:-top-40 rounded-xl border border-white/20 bg-white/2 backdrop-blur-md p-6 shadow-lg 
-                w-3/4">
-                <div class="flex flex-col gap-4">
-                    <h1 class="text-center text-xl">Soft skill</h1>
-                    <hr class="opacity-20">
-                    <nav class="ml-6">
-                        <li>HTMl</li>
-                        <li>CSS</li>
-                        <li>JavaScritp</li>
-                        <li>Tailwind css</li>
-                        <li>Vue.js</li>
-                        <li>PHP</li>
-                    </nav>
-                    <p class="mt-4 text-sm opacity-70">
-                        Також маю базові знання: Python, SQL, Node.js.
-                    </p>
-                </div>
-            </div>
-
-
-            <div class="flex justify-end">
-                <div
-                    class="relative -top-4 rounded-xl border border-white/20 bg-white/2 backdrop-blur-md shadow-lg min-w-74 w-1/2
-                    lg:w-1/3">
-                    <img src="/about.webp" alt="" class="rounded-xl">
-                </div>
-            </div>
-
-        </div>
-    </div> -->
-
     <div class="flex flex-col pt-8 md:px-20 lg:px-40 xl:px-60 overflow-hidden relative">
-        <div class="rounded-xl border border-white/20 bg-white/2 
+        <div class="relative left-5 lg:static rounded-xl border border-white/20 bg-white/2 
         backdrop-blur-md p-6 shadow-lg w-3/4">
             <div class="flex flex-col gap-4">
                 <h1 class="text-center text-xl">About me</h1>
@@ -106,8 +46,8 @@
             </div>
         </div>
 
-        <div class="flex justify-end relative -top-12 right-12">
-            <div class="rounded-xl border border-white/20 bg-white/2 backdrop-blur-md p-6 shadow-lg w-3/4
+        <div class="flex justify-end relative -top-12 right-4 lg:right-12">
+            <div class="rounded-xl border border-white/20 bg-white/2 backdrop-blur-md p-6 shadow-lg w-4/5
                     lg:w-120">
                 <div class="flex flex-col gap-4">
                     <h1 class="text-center text-xl">Education</h1>

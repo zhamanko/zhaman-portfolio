@@ -60,42 +60,29 @@ export default {
 
 <template>
 
-    <h1 class="text-center text-4xl mt-10 mb-7">My projects</h1>
+  <h1 class="text-center text-4xl mt-5 mb-5">My projects</h1>
 
-  <div
-    class="relative w-full overflow-hidden"
-    @touchstart="handleTouchStart"
-    @touchend="handleTouchEnd"
-  >
+  <div class="relative w-full overflow-hidden" @touchstart="handleTouchStart" @touchend="handleTouchEnd">
     <!-- Слайдер -->
-    <div
-      class="flex transition-transform duration-500"
-      :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
-    >
-      <div
-        v-for="(group, gIndex) in groupedProjects"
-        :key="gIndex"
-        class="flex-shrink-0 w-full flex flex-col gap-6 px-4"
-      >
-        <div
-          v-for="project in group"
-          :key="project.id"
-          class="rounded-xl border border-white/20 bg-white/5 backdrop-blur-md p-4 shadow-lg"
-        >
-          <img :src="project.img" alt="" class="rounded w-full  object-cover" />
-          <div class="flex justify-between opacity-70 mt-3 px-2">
-            <p>{{ project.id.toString().padStart(2, "0") }}</p>
-            <p>{{ project.year }}</p>
-          </div>
-          <h1 class="text-xl lg:text-2xl mt-4 ml-4">{{ project.name }}</h1>
-          <div class="flex flex-wrap gap-2 opacity-70 justify-end mt-4">
-            <p
-              v-for="tech in project.tehnologia"
-              :key="tech"
-              class="bg-white/10 border border-white/30 py-1 px-3 rounded-full text-sm"
-            >
-              {{ tech }}
-            </p>
+    <div class="flex transition-transform duration-500" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+      <div v-for="(group, gIndex) in groupedProjects" :key="gIndex"
+        class="flex-shrink-0 w-full flex flex-col gap-8 pt-6">
+        <div v-for="project in group" :key="project.id" class="rounded-xl border border-white/20 bg-white/5 backdrop-blur-md p-4 shadow-lg
+          lg:flex lg:flex-row lg:gap-10">
+          <img :src="project.img" alt="" class="relative -top-10 rounded w-full object-cover lg:w-1/3" />
+
+          <div class="w-full h-full lg:flex lg:flex-col lg:justify-around lg:pr-10">
+            <div class="flex justify-between opacity-70 px-2">
+              <p>{{ project.id.toString().padStart(2, "0") }}</p>
+              <p>{{ project.year }}</p>
+            </div>
+            <h1 class="text-2xl lg:text-3xl mt-4 ml-4">{{ project.name }}</h1>
+            <div class="flex flex-wrap gap-2 opacity-70 justify-end mt-4">
+              <p v-for="tech in project.tehnologia" :key="tech"
+                class="bg-white/10 border border-white/30 py-1 px-3 rounded-full text-sm lg:text-base">
+                {{ tech }}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -105,26 +92,22 @@ export default {
     <button
       @click="prev"
       :disabled="currentIndex === 0"
-      class="absolute top-1/2 left-2 -translate-y-1/2 bg-white/10 border border-white/30 rounded-full px-3 py-2 disabled:opacity-30"
+      class="absolute top-1/2 left-2 -translate-y-1/2 z-10 bg-white/10 border border-white/30 rounded-full px-3 py-2 disabled:opacity-30"
     >
       ←
     </button>
     <button
       @click="next"
       :disabled="currentIndex === totalSlides - 1"
-      class="absolute top-1/2 right-2 -translate-y-1/2 bg-white/10 border border-white/30 rounded-full px-3 py-2 disabled:opacity-30"
+      class="absolute top-1/2 right-2 -translate-y-1/2 z-10 bg-white/10 border border-white/30 rounded-full px-3 py-2 disabled:opacity-30"
     >
       →
     </button>
 
     <!-- Пагінація -->
     <div class="flex justify-center mt-4 gap-2">
-      <span
-        v-for="(p, i) in totalSlides"
-        :key="i"
-        class="w-3 h-3 rounded-full"
-        :class="i === currentIndex ? 'bg-purple-600' : 'bg-white/30'"
-      ></span>
+      <span v-for="(p, i) in totalSlides" :key="i" class="w-3 h-3 rounded-full"
+        :class="i === currentIndex ? 'bg-purple-600' : 'bg-white/30'"></span>
     </div>
   </div>
 </template>
