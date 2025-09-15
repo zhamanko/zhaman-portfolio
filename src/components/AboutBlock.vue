@@ -12,11 +12,9 @@
         <div class="relative left-5 lg:static rounded-xl border border-white/20 bg-white/2 
         backdrop-blur-md p-6 shadow-lg w-3/4">
             <div class="flex flex-col gap-4">
-                <h1 class="text-center text-xl">About me</h1>
+                <h1 class="text-center text-xl">{{ $t("aboutTitle") }}</h1>
                 <hr class="opacity-20">
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Placeat alias, qui sit est molestias delectus provident assumenda fugiat minima, adipisci quaerat?
-                    Error enim modi iure. Animi ut facere cum? Voluptate?</p>
+                <p class="text-justify">{{ $t("aboutText") }}</p>
             </div>
         </div>
 
@@ -30,7 +28,7 @@
         <div class="rounded-xl border border-white/20 bg-white/2 backdrop-blur-md p-6 shadow-lg 
                 w-3/4 relative -top-9">
             <div class="flex flex-col gap-4">
-                <h1 class="text-center text-xl">Soft skill</h1>
+                <h1 class="text-center text-xl">{{ $t("softTitle") }}</h1>
                 <hr class="opacity-20">
                 <nav class="ml-6">
                     <li>HTMl</li>
@@ -41,7 +39,7 @@
                     <li>PHP</li>
                 </nav>
                 <p class="mt-4 text-sm opacity-70">
-                    Також маю базові знання: Python, SQL, Node.js.
+                    {{ $t("softText") }}: Java, Python, SQL, Node.js.
                 </p>
             </div>
         </div>
@@ -50,11 +48,11 @@
             <div class="rounded-xl border border-white/20 bg-white/2 backdrop-blur-md p-6 shadow-lg w-4/5
                     lg:w-120">
                 <div class="flex flex-col gap-4">
-                    <h1 class="text-center text-xl">Education</h1>
+                    <h1 class="text-center text-xl">{{ $t("educationTitle") }}</h1>
                     <hr class="opacity-20">
                     <nav class="ml-6">
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>{{ $t("educationCollege") }}</li>
+                        <li>{{ $t("educationUniversity") }}</li>
                     </nav>
                 </div>
             </div>

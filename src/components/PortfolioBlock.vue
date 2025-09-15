@@ -85,16 +85,16 @@ export default {
 
   <div class="absolute inset-0 pointer-events-none">
     <div
-      class="absolute opacity-20 top-30 left-30 w-60 h-60 md:-top-20 md:-left-20 md:w-120 md:h-120 rounded-full bg-red-600 blur-3xl">
+      class="absolute opacity-20 top-30 left-30 w-60 h-60 md:-top-20 md:-left-20 md:w-120 md:h-120 rounded-full bg-yellow-600 blur-3xl">
     </div>
     <div
-      class="absolute opacity-40 bottom-30 right-10 w-56 h-56 md:bottom-20 md:-right-20 md:w-90 md:h-90 rounded-full bg-cyan-600 blur-3xl">
+      class="absolute opacity-40 bottom-30 right-10 w-56 h-56 md:bottom-20 md:-right-20 md:w-90 md:h-90 rounded-full bg-teal-600 blur-3xl">
     </div>
   </div>
 
-  <div class="flex flex-col pt-8 overflow-hidden relative">
+  <div class="flex flex-col overflow-hidden relative">
 
-    <h1 class="text-center text-4xl mt-5 mb-5">My projects</h1>
+    <h1 class="text-center text-4xl mt-5 mb-5">{{ $t("projectTitile") }}</h1>
 
     <div class="relative w-full overflow-hidden" @touchstart="handleTouchStart" @touchend="handleTouchEnd">
       <!-- Слайдер -->

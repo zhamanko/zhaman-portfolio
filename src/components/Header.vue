@@ -34,6 +34,10 @@ export default {
 
             const sections = (this.$refs.main || document).querySelectorAll('section');
             sections.forEach(s => this.observer.observe(s));
+        },
+        changeLang(lang) {
+            this.$i18n.locale = this.$i18n.locale === "ua" ? "en" : "ua";
+            localStorage.setItem('lang', this.$i18n.locale )
         }
     }
 }
@@ -41,9 +45,16 @@ export default {
 
 <template>
 
-    <header class="fixed z-20 bottom-2 left-2 right-2 lg:top-2 lg:left-auto flex flex-col justify-center items-center text-white border
+    <header class="fixed z-20 bottom-2 left-2 right-2 lg:top-2 lg:left-auto flex flex-row lg:flex-col justify-center items-center text-white border
   border-white/20 bg-white/2 backdrop-blur-md px-2 py-2 rounded-lg">
-        <div class="flex-1"></div>
+        <div class="flex-1 flex ">
+            <transition name="lang-fade" mode="out-in">
+                <button :key="$i18n.locale" @click="changeLang"
+                    class="p-1 h-8 text-base text-white transform transition-all ease-in-out">
+                    {{ $i18n.locale.toUpperCase() }}
+                </button>
+            </transition>
+        </div>
         <div>
             <nav class="flex flex-row lg:flex-col items-center gap-5">
                 <a href="#home" @click.prevent="scrollTo('home')"
@@ -109,3 +120,20 @@ export default {
     </header>
 
 </template>
+
+<style scoped>
+.lang-fade-enter-active,
+.lang-fade-leave-active {
+    transition: all 0.3s ease;
+}
+
+.lang-fade-enter-from {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.lang-fade-leave-to {
+    opacity: 0;
+    transform: scale(0.8);
+}
+</style>

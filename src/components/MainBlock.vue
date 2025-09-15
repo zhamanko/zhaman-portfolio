@@ -11,8 +11,8 @@
 
       <div class="relative rounded-xl border border-white/20 bg-white/2 backdrop-blur-md p-6 md:p-12 shadow-lg">
         <h1 class="text-4xl md:text-6xl leading-tight text-center text-white font-bold">
-          Hello, I'm Zhaman<br />
-          <span class="text-purple-400">a Junior Front-end developer</span>
+          {{ $t("helloName") }}<br />
+          <span class="text-purple-400">{{ $t("job") }}</span>
         </h1>
       </div>
 </template>
