@@ -45,12 +45,13 @@ export default {
 
 <template>
 
-    <header class="fixed z-20 bottom-2 left-2 right-2 lg:top-2 lg:left-auto flex flex-row lg:flex-col justify-center items-center text-white border
+    <header class="fixed z-20 bottom-2 left-2 right-2 lg:top-2 lg:left-auto flex flex-row-reverse  lg:flex-col justify-center items-center text-white border
   border-white/20 bg-white/2 backdrop-blur-md px-2 py-2 rounded-lg">
-        <div class="flex-1 flex ">
+        <div class="flex-1 flex justify-end">
             <transition name="lang-fade" mode="out-in">
                 <button :key="$i18n.locale" @click="changeLang"
-                    class="p-1 h-8 text-base text-white transform transition-all ease-in-out">
+                    class="p-1 h-8 text-base text-white transform transition-all ease-in-out
+                    opacity-70 hover:opacity-100 ">
                     {{ $i18n.locale.toUpperCase() }}
                 </button>
             </transition>

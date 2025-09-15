@@ -8,14 +8,17 @@ const messages = {
         job: "a Junior Front-end developer",
 
         aboutTitle: "About me",
-        aboutText: "Text about",
+        aboutText: "My name is Zhaman, and I am a Junior Front-end Developer. I am passionate about creating beautiful and user-friendly web projects where every detail matters. I enjoy experimenting with design and bringing interesting ideas to life from start to finish. I have basic knowledge of HTML, CSS, JavaScript, Tailwind CSS, and Vue.js, and I am constantly striving to grow and learn new things. Every project for me is an opportunity to learn something new and leave my mark in the web world.",
 
         softTitle: "Soft skill",
         softText: "I also have basic knowledge",
 
         educationTitle: "Education",
-        educationCollege: "Collge",
-        educationUniversity: "University",
+        educationJunior: "Junior Specialist",
+        educationBachelor: "Bachelor",
+        educationCollege: " – Software Engineer, UzhNU PHFK",
+        educationUniversity: " – Software Engineer, UzhNU",
+
 
         projectTitile: "My projects",
 
@@ -26,14 +29,17 @@ const messages = {
         job: "молодший Front-end розробник",
 
         aboutTitle: "Про мене",
-        aboutText: "Текст про мене",
+        aboutText: "Мене звати Zhaman, і я — Junior Front-end розробник. Я захоплююсь створенням красивих та зручних веб-проєктів, де кожна деталь має значення. Люблю експериментувати з дизайном, а також реалізовувати цікаві ідеї від початку до кінця. Маю базові знання в HTML, CSS, JavaScript, Tailwind CSS та Vue.js, і постійно прагну розвиватися та навчатися новому. Кожен проєкт для мене — це можливість навчитися чогось нового та залишити свій слід у веб-світі.",
 
         softTitle: "М'які навички",
         softText: "Також маю базові знання",
 
         educationTitle: "Освіта",
-        educationCollege: "Коледж",
-        educationUniversity: "Університет",
+        educationJunior: "Молодший спеціаліст",
+        educationBachelor: "Бакалавр",
+        educationCollege: " – Інженер програмного забезпечення, ДВНЗ 'УжНУ' ПГФК",
+        educationUniversity: " – Інженер програмного забезпечення, ДВНЗ 'УжНУ'",
+
 
         projectTitile: "Мої проєкти",
 

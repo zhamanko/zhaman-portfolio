@@ -51,8 +51,8 @@
                     <h1 class="text-center text-xl">{{ $t("educationTitle") }}</h1>
                     <hr class="opacity-20">
                     <nav class="ml-6">
-                        <li>{{ $t("educationCollege") }}</li>
-                        <li>{{ $t("educationUniversity") }}</li>
+                        <li><strong>{{ $t("educationJunior") }}</strong> {{ $t("educationCollege") }}</li>
+                        <li><strong>{{ $t("educationBachelor") }}</strong> {{ $t("educationUniversity") }}</li>
                     </nav>
                 </div>
             </div>

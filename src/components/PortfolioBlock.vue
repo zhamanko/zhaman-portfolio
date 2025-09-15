@@ -122,9 +122,6 @@ export default {
         </div>
       </div>
 
-      <!-- Кнопки -->
-
-
       <!-- Пагінація -->
       <div class="flex justify-center items-center mt-4 gap-4">
         <!-- prev -->
