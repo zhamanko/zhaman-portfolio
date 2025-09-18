@@ -1,16 +1,26 @@
 <template>
     <div class="absolute inset-0 pointer-events-none">
-        <div
-            class="absolute opacity-20 top-30 left-30 w-60 h-60 md:-top-20 md:-left-20 md:w-120 md:h-120 rounded-full bg-red-600 blur-3xl">
+        <div class="absolute opacity-40 
+          top-30 left-10 w-40 h-40 
+          sm:top-40 sm:left-20 
+          md:top-35 md:left-40 
+           lg:left-40
+          scale-160 md:scale-200 ld:scale-302 xl:scale-305
+          rounded-full bg-cyan-600 blur-3xl">
         </div>
-        <div
-            class="absolute opacity-40 bottom-30 right-10 w-56 h-56 md:bottom-20 md:-right-20 md:w-90 md:h-90 rounded-full bg-cyan-600 blur-3xl">
+        <div class="absolute opacity-50 
+          bottom-30 right-1 w-40 h-40 
+          sm:right-20 
+          md:bottom-40 md:right-50 
+          lg:right-70
+          scale-180 md:scale-200 ld:scale-302 xl:scale-310 
+          rounded-full bg-red-500 blur-3xl">
         </div>
     </div>
 
     <div class="flex flex-col pt-8 md:px-20 lg:px-40 xl:px-60 overflow-hidden relative">
-        <div class="relative left-5 lg:static rounded-xl border border-white/20 bg-white/2 
-        backdrop-blur-md p-6 shadow-lg w-3/4">
+        <div class="relative left-5 lg:static rounded-xl border border-white/10 bg-white/2 
+        backdrop-blur-xl p-6 shadow-lg w-3/4">
             <div class="flex flex-col gap-4">
                 <h1 class="text-center text-xl">{{ $t("aboutTitle") }}</h1>
                 <hr class="opacity-20">
@@ -19,13 +29,13 @@
         </div>
 
         <div class="flex justify-end relative -top-4 z-2">
-            <div class="rounded-xl border border-white/20 bg-white/2 backdrop-blur-md shadow-lg min-w-74 w-1/2
+            <div class="rounded-xl border border-white/10 bg-white/2 backdrop-blur-md shadow-lg min-w-74 w-1/2
                     lg:w-1/3">
-                <img src="/about.webp" alt="" class="rounded-xl">
+                <img src="/about.webp" alt="" class="rounded-xl opacity-80">
             </div>
         </div>
 
-        <div class="rounded-xl border border-white/20 bg-white/2 backdrop-blur-md p-6 shadow-lg 
+        <div class="rounded-xl border border-white/10 bg-white/2 backdrop-blur-xl p-6 shadow-lg 
                 w-3/4 relative -top-9">
             <div class="flex flex-col gap-4">
                 <h1 class="text-center text-xl">{{ $t("softTitle") }}</h1>
@@ -45,7 +55,7 @@
         </div>
 
         <div class="flex justify-end relative -top-12 right-4 lg:right-12">
-            <div class="rounded-xl border border-white/20 bg-white/2 backdrop-blur-md p-6 shadow-lg w-4/5
+            <div class="rounded-xl border border-white/10 bg-white/2 backdrop-blur-xl p-6 shadow-lg w-4/5
                     lg:w-120">
                 <div class="flex flex-col gap-4">
                     <h1 class="text-center text-xl">{{ $t("educationTitle") }}</h1>

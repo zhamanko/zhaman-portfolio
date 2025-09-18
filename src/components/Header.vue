@@ -46,7 +46,7 @@ export default {
 <template>
 
     <header class="fixed z-20 bottom-2 left-2 right-2 lg:top-2 lg:left-auto flex flex-row-reverse  lg:flex-col justify-center items-center text-white border
-  border-white/20 bg-white/2 backdrop-blur-md px-2 py-2 rounded-lg">
+  border-white/10 bg-white/2 backdrop-blur-lx px-2 py-2 rounded-lg">
         <div class="flex-1 flex justify-end">
             <transition name="lang-fade" mode="out-in">
                 <button :key="$i18n.locale" @click="changeLang"

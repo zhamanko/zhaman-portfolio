@@ -1,10 +1,20 @@
 <template>
     <div class="absolute inset-0 pointer-events-none">
-        <div
-            class="absolute opacity-20 top-30 left-30 w-60 h-60 md:-top-20 md:-left-20 md:w-120 md:h-120 rounded-full bg-blue-600 blur-3xl">
+        <div class="absolute opacity-40 
+          top-30 left-10 w-40 h-40 
+          sm:top-40 sm:left-20 
+          md:top-35 md:left-40 
+           lg:left-40
+          scale-160 md:scale-200 ld:scale-302 xl:scale-305
+          rounded-full bg-orange-400 blur-3xl">
         </div>
-        <div
-            class="absolute opacity-40 bottom-30 right-10 w-56 h-56 md:bottom-20 md:-right-20 md:w-90 md:h-90 rounded-full bg-pink-600 blur-3xl">
+        <div class="absolute opacity-50 
+          bottom-30 right-1 w-40 h-40 
+          sm:right-20 
+          md:bottom-40 md:right-50 
+          lg:right-70
+          scale-180 md:scale-200 ld:scale-302 xl:scale-310 
+          rounded-full bg-emerald-500 blur-3xl">
         </div>
     </div>
 
@@ -14,8 +24,8 @@
             <img src="/logo_text.png" alt="" class=" lg:w-3/5 grayscale">
         </div>
 
-        <div class="relative rounded-xl border border-white/20 bg-white/2 
-        backdrop-blur-md p-7 shadow-lg lg:w-2/3">
+        <div class="relative rounded-xl border border-white/10 bg-white/2 
+        backdrop-blur-xl p-7 shadow-lg lg:w-2/3">
             <p class="text-justify text-lg">{{ $t("aboutforwebText") }}</p>
         </div>
 
