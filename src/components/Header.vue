@@ -98,7 +98,7 @@ export default {
         <div class="flex-1"></div>
         <div>
             <nav class="hidden lg:flex flex-col gap-2">
-                <a href="#instagram">
+                <a href="https://www.instagram.com/_z_h_a_m_a_n_/" target="_blank">
                     <svg class="w-6 h-6 text-gray-800 dark:text-white opacity-65 hover:opacity-100 transition"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                         viewBox="0 0 24 24">
@@ -107,7 +107,7 @@ export default {
                             clip-rule="evenodd" />
                     </svg>
                 </a>
-                <a href="#GitHub">
+                <a href="https://github.com/zhamanko" target="_blank">
                     <svg class="w-6 h-6 text-gray-800 dark:text-white opacity-65 hover:opacity-100 transition"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         viewBox="0 0 24 24">
