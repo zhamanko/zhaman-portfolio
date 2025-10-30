@@ -47,6 +47,7 @@
                     <li>Tailwind css</li>
                     <li>Vue.js</li>
                     <li>PHP</li>
+                    <li>React.js</li>
                 </nav>
                 <p class="mt-4 text-sm opacity-70">
                     {{ $t("softText") }}: Java, Python, SQL, Node.js.
