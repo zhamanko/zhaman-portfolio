@@ -132,7 +132,7 @@ export default {
         <div class="flex flex-wrap gap-2 mt-3">
           <span v-if="repo.language" class="px-2 py-1 rounded border border-white/10">{{ repo.language }}</span>
           <a v-if="repo.homepage" :href="repo.homepage" target="_blank"
-            class="px-2 py-1 rounded border border-white/10">{{ $t("live") }}</a>
+            class="px-2 py-1 rounded border border-white/10 bg-blue-500/15">{{ $t("live") }}</a>
           <span class="px-2 py-1 rounded border border-white/10">★ {{ repo.stargazers_count }}</span>
         </div>
       </div>
