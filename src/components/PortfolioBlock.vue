@@ -16,7 +16,7 @@ export default {
       languages: [],
 
       page: 1,
-      perPage: 6
+      perPage: 7
     }
   },
 
@@ -30,17 +30,8 @@ export default {
         const desc = (r.description || '').toLowerCase()
         return name.includes(qq) || desc.includes(qq)
       })
+      
     },
-
-    pages() {
-      return Math.max(1, Math.ceil(this.filteredRepos.length / this.perPage))
-    },
-
-    paginated() {
-      if (this.page > this.pages) this.page = this.pages
-      const start = (this.page - 1) * this.perPage
-      return this.filteredRepos.slice(start, start + this.perPage)
-    }
   },
 
   methods: {
@@ -120,7 +111,7 @@ export default {
     <div v-if="error" class="text-red-600">{{ error }}</div>
 
     <div v-if="!loading && !error" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div v-for="repo in paginated" :key="repo.id" class="p-4 rounded-lg border border-white/10 bg-white/2 backdrop-blur-xl">
+      <div v-for="repo in repos" :key="repo.id" class="p-4 rounded-lg border border-white/10 bg-white/2 backdrop-blur-xl">
         <div class="flex items-start justify-between gap-2">
           <a :href="repo.html_url" target="_blank" rel="noopener" class="font-semibold text-lg hover:underline">
             {{ repo.name }}
